@@ -1,0 +1,26 @@
+img {
+  max-width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.christmas-title {
+  height: 50px;
+  line-height: 50px;
+  background-color: black;
+  color: green;
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+ul {
+  margin: 10px;
+}
+
+.red-word {
+  color: red;
+}
+.green-word {
+  color: green;
+}

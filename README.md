@@ -15,17 +15,17 @@ If you'd like to try and run this on your computer at home, follow the following
 9. Type `bundle exec shotgun -p 3000 -o 0.0.0.0` & hit Enter
 10. Open `http://localhost:3000/` in your browser & you should see this website running.
 
-_NOTE:_ To run this app you must have ruby installed on your computer. I believe all Mac Laptops come with Ruby pre-installed, but if you are working on a Windows computer, you may have to manually install it. This can be tricky - this is the official website for Ruby and does state how to install it (here)[https://www.ruby-lang.org/en/documentation/installation/], BUT I would strongly suggest NOT to dig your way through it at this point as it can be VERY frustrating.
+_NOTE:_ To run this app you must have ruby installed on your computer. I believe all Mac Laptops come with Ruby pre-installed, but if you are working on a Windows computer, you may have to manually install it. This can be tricky - this is the official website for Ruby and does state how to install it [here](https://www.ruby-lang.org/en/documentation/installation/), BUT I would strongly suggest NOT to dig your way through it at this point as it can be VERY frustrating.
 
 You can check if your machine has ruby installed already by typing `ruby -v` into your terminal command line. If this throws an error, it means you do not have ruby and you cannot run this project yet.
 
 
 ## Note to students
-Guten Abend (good evening in German... since German treats were our topic today :)
+Guten Abend!! ('Good Evening' in German :) since German treats were our topic today)
 
-Today's curriculum was packed with new syntax & concepts - hope my example web site with the _German Christmas Treats_ helped you work through some of the Finstagram assignments you were given.
+Today's curriculum was packed with new syntax & concepts!! I hope my example web site with the _German Christmas Treats_ helped you work through some of the Finstagram assignments you were given.
 
-Since we ran out of time to cover some overarching information of web development I'll try to cover a tiny bit in these notes. Also, here's a short video I found helpful to review the structure of the *Backend* of a web site / web app: (YouTube Video)[https://www.youtube.com/watch?v=4r6WdaY3SOA]
+Since we ran out of time to cover some overarching information of web development I'll try to cover a tiny bit in these notes. Also, here's a short video I found helpful to review the structure of the *Backend* of a web site / web app: [YouTube Video](https://www.youtube.com/watch?v=4r6WdaY3SOA)
 
 Remember, *Ruby* is a back-end language.
 HTML & CSS are front-end languages.
@@ -67,19 +67,19 @@ end
 # code to be execute
 end
 ```
-Here are two webites to look up all the different loop options in Ruby:
-- (launchschool Ruby)[https://launchschool.com/books/ruby/read/loops_iterators#simpleloop]
-- (geeksforgeeks Ruby)[https://www.geeksforgeeks.org/ruby-types-of-iterators/]
+Here are two websites to look up all the different loop options in Ruby:
+- [launchschool Ruby](https://launchschool.com/books/ruby/read/loops_iterators#simpleloop)
+- [geeksforgeeks Ruby](https://www.geeksforgeeks.org/ruby-types-of-iterators/)
 
 ### ERB (Embedded Ruby)
 
-Instead of writing all the HTML we need ourself line by line, we can now dynamically create it by using loops _inside_ of our HTML files. But watch out, you must change the file ending from `.html` to `.erb` so Sinatra knows what type of file it is receiving. Once our filenem ends in `.erb` we can write Ruby code by embedding it into our HTML within "Aligator Tags".
+Instead of writing all the HTML we need ourself line by line, we can now dynamically create it by using loops _inside_ of our HTML files. But watch out, you must change the file ending from `.html` to `.erb` so Sinatra knows what type of file it is receiving. Once our filename ends in `.erb` we can write Ruby code by embedding it into our HTML within "Aligator Tags".
 
 In our defined routes (our `actions.rb` file) we tell Sinatra to load up the `index.erb` file once the Homepage (`'/'`) is requested.
 
-Sinatra will always FIRST search for a `layout.erb` file to use as the base (what I kept calling it the skeleton file structure today...) and will then inject whichever file you defined into the `<%= yield %>` placeholder in the `layout.erb` file. In the below example we want to inject the `index.erb` into the `layout.erb` file:
+Sinatra will always FIRST search for a `layout.erb` file to use as the base (what I kept calling it the 'skeleton file structure' today...) and will then inject whichever file you defined into the `<%= yield %>` placeholder in the `layout.erb` file. In the below example we want to inject the `index.erb` into the `layout.erb` file:
 
-_this is my actions.rb file:_
+_this is my actions.rb file before adding the treats variables to it):_
 ```ruby
   get '/' do
     erb(:index)

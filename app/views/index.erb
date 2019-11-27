@@ -1,0 +1,10 @@
+<ul>
+  <% @treats.each do |treat| %>
+    <li>
+      <h3>
+        <%= treat[:name] %>
+      </h3>
+      <img src="<%= treat[:img_url] %>" />
+    </li>
+  <% end %>
+</ul>
